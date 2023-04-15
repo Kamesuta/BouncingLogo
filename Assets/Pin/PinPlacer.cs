@@ -7,6 +7,7 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 public class PinPlacer : MonoBehaviour
 {
     public GameObject pinPrefab;
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class PinPlacer : MonoBehaviour
     void Update()
     {
         // âΩÇ©ÇÃÉLÅ[Ç™âüâ∫Ç≥ÇÍÇΩÇÁ
-        if (Input.anyKeyDown)
+        if (!gameManager.isStarted && Input.anyKeyDown)
         {
             foreach (KeyCode keycode in System.Enum.GetValues(typeof(KeyCode)))
             {

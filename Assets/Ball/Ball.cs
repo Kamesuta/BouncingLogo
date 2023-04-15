@@ -13,14 +13,18 @@ public class Ball : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-
-        rigid.AddForce(force);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    // ボールをスタートさせる
+    public void BallStart()
+    {
+        rigid.AddForce(force);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
