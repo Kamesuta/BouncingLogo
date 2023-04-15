@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Ball : MonoBehaviour
 {
     public Vector2 force;
     private Rigidbody2D rigid;
